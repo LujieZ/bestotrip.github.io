@@ -1,1 +1,6 @@
-# BestoTrip.github.io
+# Lujie's Github Page
+
+This is the first Github page by Lujie"Sue" Zhao.
+You can access it [here](https://lujiez.github.io/).
+
+Theme: Jekyll(Minimal)
