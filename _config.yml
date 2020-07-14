@@ -1,2 +1,6 @@
-theme: jekyll-theme-minimal
+# Site settings
 title: _LUJIE_
+email: lujie.sue.zhao@gmail.com
+github_username: LujieZ
+# Build settings
+theme: jekyll-theme-minimal
