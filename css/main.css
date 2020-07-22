@@ -1,25 +1,7 @@
-/** Section formatting */
+/** Text formatting */
 body {
-    margin: 60px auto;
-    width: 70%;
     background-color: #1C1C1C;
     color: #FCFAF2;
-}
-
-container {
-    margin: 0 auto 0 auto;
-}
-
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
 }
 
 a {
@@ -31,29 +13,8 @@ a:hover {
     text-decoration: underline;
 }
 
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    margin-left: auto;
-    margin-right: auto;
-}
-
 p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #FCFAF2;
-}
-
-footer {
-    border-top: 1px solid #BDC0BA;
-    font-size: .8em;
-}
-
-ul.posts {
-    margin: 20px auto 40px;
-    font-size: 1.5em;
-}
-
-ul.posts li {
-    list-style: none;
 }
