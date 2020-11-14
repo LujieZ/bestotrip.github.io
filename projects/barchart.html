@@ -7,83 +7,99 @@
   </head>
   <body>
     <nav class="bg-gold sans-serif pa3 pa4-ns mw9 center ph7-l">
-  	  <a class="bg-black-90 lh-copy white pal b f4 f3-m f-headline-l lh-title mv0">Hi, I'm Lujie.</a>
+  	  <a class="bg-black-90 lh-copy white pal b f2 f1-m f-headline-l measure-narrow lh-title mv0">Hi, I'm Lujie.</a>
   	  <div class="mt2 baskerville pb3">
     		<a class="link dim near-black fb6 f4-ns dib mr4" href="/">Home</a>
         <a class="link dim near-black fb6 f4-ns dib mr4" href="/projects/projects">Projects</a>
     		<a class="link dim near-black fb6 f4-ns dib mr4" href="/cv">CV</a>
   	  </div>
   	</nav>
-  	<div class="pa4 avenir ph5-l mw9-l center">
-      <div class="dt mw6 center pv3 pv3-m pv2-ns">
-        <div class="dtc v-mid">
-          <img src="../images/barchart.gif" alt="A bright blue sky" class="mw5" />
-        </div>
-        <div class="dtc v-mid pl3">
-          <p class="lh-copy">
-            <b>Visualization of Configuration Pushes</b>
-          </p>
-        </div>
-      </div>
-      <div class="f5-ns lh-copy measure center">
+    <article class="bb b--black-10 pb4 lh-copy measure center black-90 mw7 center">
+      <h1 class="f2 fw2 pt5 baskerville pb3">Visualization of Configuration Pushes</h1>
+      <img src="../images/barchart.gif" class="w-100 f5 measure" alt="poster">
+      <p class="measure avenir lh-copy">
         This internship project is about a service internal to Google that is
         responsible for dynamically pushing pieces of configuration or data to
-        running processes.<br><br>
-        <b>Motivations</b><br>
+        running processes.
+      </p>
+      <h4 class="measure avenir lh-copy">Motivations</h5>
+      <p class="measure avenir lh-copy">
         The two main questions this project tries to address are:<br>
         1. how do the start and end of all pushes in a push def line up against
         each other?<br>
-        2. how does a current push compare against previous pushes?<br><br>
-
-        <b>Terminology</b><br>
+        2. how does a current push compare against previous pushes?
+      </p>
+      <h4 class="measure avenir lh-copy">Terminology</h5>
+      <p class="measure avenir lh-copy">
         A <i>push definition</i> (push def) describes a particular push. The most
         relevant information for this project is that a push def describes how a
-        push is split in several stages. At Google the push defs are organized
+        push is split in several stages. At Google, the push defs are organized
         in a tree hierarchy but, for simplicity, in this project we only used a
-        flat list of push defs.<br>
+        flat list of push defs.
+      </p>
+      <p class="measure avenir lh-copy">
         Each push for a particular push def is identified by a <i>push handle</i>.
         The handle is composed by joining the name for the push def with a push
-        ID.<br>
+        ID.
+      </p>
+      <p class="measure avenir lh-copy">
         For each push there is a <i>push info</i> that describes what happened
         during a particular push. This includes information about when the push
         started and when the transition from one stage+state to the next
-        happened.<br>
+        happened.
+      </p>
+      <p class="measure avenir lh-copy">
         A push is split in several <i>stages</i>, with each stage updating only
         a subset of the consumers. Each stage also has an attempt counter
         associated with it because a stage can be retried several times.<br>
-        Each stage can go through several states before completing.<br><br>
-
-        <b>Bar Chart</b><br>
+        Each stage can go through several states before completing.
+      </p>
+      <h4 class="measure avenir lh-copy">Bar Chart</h5>
+      <p class="measure avenir lh-copy">
         The bar chart is a visualization element that helps with the second
         major question: how does a current push compare against previous pushes,
-        when the number of pushes is not very large? The bar chart displays the
+        when the number of pushes is not very large?
+      </p>
+      <p class="measure avenir lh-copy">
+        The bar chart displays the
         pushes in chronological order, because the pushes happened most recently
         are probably more important to the user. The y axis of the bar chart is
         the duration of a single push, with the most common time unit of the
         pushes. The bar chart consists of a focus bar chart, a compressed bar
         chart with a selector, and a box plot. The focus bar chart shows a
         default number of pushes when the user opens the page.<br>
+      </p>
+      <p class="measure avenir lh-copy">
         There are several interactive features integrated in the bar chart. The
-        user can use the <b>selector</b> to slide among the bars and select any
-        portion to display. The <b>drop down menu</b> lets the user to switch
-        between all pushes and completed pushes. When the user <b>hovers</b> on
-        a bar or the empty area above it, the bar will be highlighted and a
-        tooltip with the push's pushID, end state, and start time will appear on
-        top of the bar, as well as a tag with the duration of the push.<br><br>
-
-        <b>Box Plot</b><br>
+        user can use the <span class="gold">selector</span> to slide among the
+        bars and select any portion to display. The <span class="gold">drop down
+        menu</span> lets the user to switch between all pushes and completed
+        pushes. When the user <span class="gold">hovers</span> on a bar or the
+        empty area above it, the bar will be highlighted and a tooltip with the
+        push's pushID, end state, and start time will appear on top of the bar,
+        as well as a tag with the duration of the push.
+      </p>
+      <h4 class="measure avenir lh-copy">Box Plot</h5>
+      <p class="measure avenir lh-copy">
         The bar chart also features a box plot that allows the user to compare
         the current push duration to the previous pushes and helps the user
         predict the completion time of an ongoing push. The box plot contains
-        five labels that show the minimum, first quantile(25%), median, third
-        quantile(75%), and maximum duration of the pushes appeared in the focus
-        bar chart. When the selector updates the focus bar chart or the
+        <span class="gold">five labels</span> that show the minimum, first
+        quantile(25%), median, third quantile(75%), and maximum duration of the
+        pushes appeared in the focus bar chart.
+      </p>
+      <p class="measure avenir lh-copy">
+        When the selector updates the focus bar chart or the
         selection of the drop down menu changes, the box plot will be updated
         with the new input data. When user hovers over the bar chart, the
         corresponding data point in the box plot will be highlighted. The points
         in the box plot will switch to a smaller radius to show the distribution
         better when there are too many data points.
-      </div>
+      </p>
+      <a class="avenir f6 link dim br3 ph3 pv2 mb2 dib white bg-near-black mt3" href="https://github.com/googleinterns/step189-2020">
+        Read my code.
+      </a>
+    </article>
     <footer class="pv4 avenir ph2 tc-l">
       <a class="no-underline near-white bg-animate bg-near-black hover-bg-gray inline-flex items-center ma2 tc br2 pa2" href="https://www.facebook.com/lujie.sue.zhao" title="Facebook">
         <svg class="dib h2 w2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">

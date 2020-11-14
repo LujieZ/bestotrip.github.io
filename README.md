@@ -9,4 +9,4 @@ Theme: Jekyll(Minimal)
 
 CSS Framework: Tachyons
 
-    Animation: Animate.css
+CSS Animation: Animate.css
