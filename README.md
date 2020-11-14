@@ -6,5 +6,7 @@ You can access it [here](https://lujiez.github.io/).
 
 
 Theme: Jekyll(Minimal)
+
 CSS Framework: Tachyons
+
     Animation: Animate.css
