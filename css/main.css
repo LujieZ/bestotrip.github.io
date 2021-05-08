@@ -1,3 +1,68 @@
 .background-yellow {
-  background-color: #f5f2d5
+  background-color: #f5f2d5;
+}
+
+.projects-img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.module-sudoku {
+  width: 180px;
+  height: 180px;
+  display: grid;
+  place-items: center;
+  color: black;
+  position: relative;
+  font: bold 30px baskerville;
+  background-image:
+    linear-gradient(black, black),
+    url(../images/sudoku.jpg);
+  background-size: cover;
+  background-blend-mode: saturation;
+}
+
+.module-bluev {
+  width: 180px;
+  height: 180px;
+  display: grid;
+  place-items: center;
+  color: white;
+  position: relative;
+  font: bold 30px baskerville;
+  background-image:
+    linear-gradient(black, black),
+    url(../images/product.jpg);
+  background-size: cover;
+  background-blend-mode: saturation;
+}
+
+.module-ml {
+  width: 180px;
+  height: 180px;
+  display: grid;
+  place-items: center;
+  color: black;
+  position: relative;
+  font: bold 20px baskerville;
+  background-image:
+    linear-gradient(black, black),
+    url(../images/machine-learning.png);
+  background-size: cover;
+  background-blend-mode: saturation;
+}
+
+.module-ai {
+  width: 180px;
+  height: 180px;
+  display: grid;
+  place-items: center;
+  color: black;
+  position: relative;
+  font: bold 25px baskerville;
+  background-image:
+    linear-gradient(black, black),
+    url(../images/ai-puzzles.jpg);
+  background-size: cover;
+  background-blend-mode: saturation;
 }
