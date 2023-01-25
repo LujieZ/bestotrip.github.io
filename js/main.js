@@ -8,12 +8,14 @@ let h1, h2, section1, section2;
 function windowResized() {
   headerHeight = document.getElementById('header').clientHeight - 65;
   resizeCanvas(windowWidth, headerHeight);
+  canvas.position(0, 0);
 
-  section1 = document.getElementById('section1').getBoundingClientRect();
-  section2 = document.getElementById('section2').getBoundingClientRect();
-  // print(headerHeight, section1);
-  h1.position(section1.x, section1.y-10);
-  h2.position(section2.x, section2.y-10);
+  if(document.location.pathname == '../index.html') {
+    section1 = document.getElementById('section1').getBoundingClientRect();
+    section2 = document.getElementById('section2').getBoundingClientRect();
+    h1.position(section1.x, section1.y-10);
+    h2.position(section2.x, section2.y-10);
+  }
 }
 
 function setup() {
@@ -21,9 +23,11 @@ function setup() {
   canvas = createCanvas(windowWidth, headerHeight);
   canvas.position(0, 0);
   canvas.style('z-index','-3');
-  section1 = document.getElementById('section1').getBoundingClientRect();
-  section2 = document.getElementById('section2').getBoundingClientRect();
-  // print(headerHeight, section1, section2);
+
+  if(document.location.pathname == '../index.html') {
+    section1 = document.getElementById('section1').getBoundingClientRect();
+    section2 = document.getElementById('section2').getBoundingClientRect();
+  }
 
   for(let i = 0; i < width; i++) {
     drops[i] = random(height);
